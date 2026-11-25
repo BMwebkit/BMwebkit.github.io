@@ -7,28 +7,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="shortcut icon" href="IMG/logo.png" type="image/x-icon">
     <title>BMwebKit | Desarrollador Web & Apps</title>
 </head>
 <body>
 
     <div class="bg-glow"></div>
 
-    <!-- BOTÓN FLOTANTE DIRECTO A WHATSAPP -->
+    <!-- BOTÓN FLOTANTE DIRECTO A WHATSAPP (FIJO ABAJO) -->
     <a href="https://wa.me/34611178499?text=Hola%20Blas,%20vengo%20desde%20tu%20web%20y%20quiero%20pedir%20información." target="_blank" rel="noopener noreferrer" class="whatsapp-float">
         💬 WhatsApp Directo
     </a>
 
     <div class="caja">
 
-        <!-- MENÚ LIMPIO -->
+        <!-- MENÚ SUPERIOR CON HAMBURGUESA LATERAL -->
         <header class="menu reveal">
             <div class="logo">BM<span>.</span></div>
-            <nav>
-                <a href="#servicios">Servicios Web</a>
-                <a href="#mantenimiento">Mantenimiento</a>
-                <a href="#proyectos">Vortex App</a>
+            
+            <!-- Botón Hamburguesa -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Navegación Lateral / Escritorio -->
+            <nav class="nav-menu" id="navMenu">
+                <button class="menu-close" id="menuClose" aria-label="Cerrar menú">&times;</button>
+                <a href="#servicios" class="enlace-nav">Servicios Web</a>
+                <a href="#mantenimiento" class="enlace-nav">Mantenimiento</a>
+                <a href="#proyectos" class="enlace-nav">Vortex App</a>
                 <a href="https://wa.me/34611178499?text=Hola%20Blas,%20quiero%20contactar%20contigo" target="_blank" rel="noopener noreferrer" class="nav-wa">WhatsApp</a>
             </nav>
+            <div class="menu-overlay" id="menuOverlay"></div>
         </header>
 
         <!-- PRESENTACIÓN / HERO -->
@@ -197,7 +209,7 @@
             </div>
         </section>
 
-        <!-- NUEVA SECCIÓN: MANTENIMIENTO Y CAMBIOS DE DISEÑO -->
+        <!-- SECCIÓN: MANTENIMIENTO Y CAMBIOS DE DISEÑO -->
         <section id="mantenimiento" class="mantenimiento-sec reveal">
             <div class="titulo-centro">
                 <h2>MANTENIMIENTO Y SOPORTE WEB</h2>
@@ -233,12 +245,12 @@
 
     </div>
 
-    <!-- FOOTER CON SOCIO DE BIELA MOTOR -->
+    <!-- FOOTER -->
     <footer>
         <div class="footer-contenido">
             <div class="footer-logo">BM<span>.</span></div>
             <div class="socio-footer-badge">
-                🤝 Socio de <strong>Biela Motor</strong> — <a href="https://talleresbielamotor.com" target="_blank" rel="noopener noreferrer">talleresbielamotor.com</a>
+                🤝 Socio de <strong>Biela Motor</strong> — <a href="https://talleresbielamtor.com" target="_blank" rel="noopener noreferrer">talleresbielamtor.com</a>
             </div>
             <p class="footer-tagline">Blas Moral — Desarrollador Web & Apps Android</p>
             <div class="footer-links">
@@ -248,13 +260,14 @@
                 <span>•</span>
                 <a href="https://play.google.com/store/apps/details?id=box.plus3&hl=es" target="_blank" rel="noopener noreferrer">Vortex App</a>
             </div>
-            <p class="copyright">&copy; Blas Moral. Todos los derechos reservados. Pagos únicamente por Bizum o Transferencia. Plazo medio de producción y testeo: 2 semanas (puede variar más o menos).</p>
+            <p class="copyright">&copy; BMWEBKIT Todos los derechos reservados. Pagos únicamente por Bizum o Transferencia. Plazo medio de producción y testeo: 2 semanas (puede variar más o menos).</p>
         </div>
     </footer>
 
-    <!-- SCRIPT DE APARICIÓN SUAVE AL HACER SCROLL -->
+    <!-- SCRIPTS (Animaciones y Menú Hamburguesa Lateral) -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            // Animación al hacer scroll
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -264,6 +277,32 @@
             }, { threshold: 0.12 });
 
             document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            // Lógica del Menú Hamburguesa Lateral
+            const menuToggle = document.getElementById('menuToggle');
+            const navMenu = document.getElementById('navMenu');
+            const menuClose = document.getElementById('menuClose');
+            const menuOverlay = document.getElementById('menuOverlay');
+            const navLinks = document.querySelectorAll('.enlace-nav, .nav-wa');
+
+            function toggleMenu() {
+                navMenu.classList.toggle('open');
+                menuOverlay.classList.toggle('open');
+                document.body.classList.toggle('no-scroll');
+            }
+
+            menuToggle.addEventListener('click', toggleMenu);
+            menuClose.addEventListener('click', toggleMenu);
+            menuOverlay.exit = toggleMenu;
+            menuOverlay.addEventListener('click', toggleMenu);
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navMenu.classList.contains('open')) {
+                        toggleMenu();
+                    }
+                });
+            });
         });
     </script>
 </body>
