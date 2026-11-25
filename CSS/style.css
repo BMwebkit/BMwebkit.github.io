@@ -30,6 +30,11 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     position: relative;
+    text-align: center; /* Todo centrado por defecto */
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
 
 .bg-glow {
@@ -49,11 +54,11 @@ body {
     padding: 1.2rem;
 }
 
-/* BOTÓN FLOTANTE WHATSAPP */
+/* BOTÓN FLOTANTE WHATSAPP (FIJO ABAJO) */
 .whatsapp-float {
     position: fixed;
-    bottom: 22px;
-    right: 22px;
+    bottom: 20px;
+    right: 20px;
     background-color: var(--verde-wa);
     color: var(--blanco);
     text-decoration: none;
@@ -71,7 +76,7 @@ body {
     transform: translateY(-4px) scale(1.04);
 }
 
-/* EFECTO DE APARICIÓN SUAVE AL HACER SCROLL */
+/* ANIMACIÓN DE APARICIÓN AL HACER SCROLL */
 .reveal {
     opacity: 0;
     transform: translateY(35px);
@@ -83,7 +88,7 @@ body {
     transform: translateY(0);
 }
 
-/* MENÚ */
+/* MENÚ SUPERIOR Y HAMBURGUESA LATERAL */
 .menu {
     display: flex;
     justify-content: space-between;
@@ -97,7 +102,7 @@ body {
     box-shadow: var(--sombra-suave);
     position: sticky;
     top: 15px;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .logo {
@@ -111,10 +116,63 @@ body {
     color: var(--naranja);
 }
 
-.menu nav {
+/* Botón Hamburguesa (Oculto en PC por defecto) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--oscuro);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.menu-close {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: var(--oscuro);
+    cursor: pointer;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1001;
+}
+
+.menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-menu {
     display: flex;
     gap: 0.6rem;
-    flex-wrap: wrap;
+    align-items: center;
 }
 
 .menu nav a {
@@ -142,7 +200,7 @@ body {
     background-color: var(--verde-wa-oscuro);
 }
 
-/* HERO */
+/* HERO / PRESENTACIÓN */
 .me {
     display: flex;
     align-items: center;
@@ -153,6 +211,7 @@ body {
     border: 1px solid var(--borde);
     box-shadow: var(--sombra-suave);
     margin-bottom: 4.5rem;
+    text-align: left;
 }
 
 .img-container {
@@ -240,6 +299,7 @@ body {
     margin-bottom: 1.8rem;
     font-size: 0.9rem;
     color: #374151;
+    text-align: left;
 }
 
 .bio-acciones {
@@ -415,6 +475,7 @@ body {
     box-shadow: 0 20px 45px rgba(22, 24, 29, 0.25);
     position: relative;
     overflow: hidden;
+    text-align: left;
 }
 
 .playst-info {
@@ -535,6 +596,7 @@ body {
     justify-content: space-between;
     position: relative;
     transition: all 0.35s ease;
+    text-align: left;
 }
 
 .card-precio:hover {
@@ -673,6 +735,7 @@ body {
     align-items: flex-start;
     gap: 1.5rem;
     transition: all 0.35s ease;
+    text-align: left;
 }
 
 .card-extra:hover {
@@ -819,12 +882,57 @@ footer {
     color: #64748b;
 }
 
-/* RESPONSIVE */
+/* =========================================
+   RESPONSIVE & MENÚ HAMBURGUESA LATERAL
+   ========================================= */
+
 @media (max-width: 1024px) {
+    /* Mostrar botón de hamburguesa y transformar menú en panel lateral */
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-close {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: var(--blanco);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.15);
+        transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        z-index: 1003;
+        padding: 2rem;
+    }
+
+    .nav-menu.open {
+        right: 0;
+    }
+
+    .menu nav a {
+        font-size: 1.1rem;
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem;
+    }
+
+    /* Adaptación de Secciones */
     .me {
         flex-direction: column;
         text-align: center;
         padding: 2.5rem;
+    }
+
+    .bio {
+        text-align: center;
     }
 
     .tags-row, .bio-acciones {
@@ -859,14 +967,8 @@ footer {
 
 @media (max-width: 640px) {
     .menu {
-        flex-direction: column;
-        gap: 0.8rem;
-        border-radius: 25px;
-        position: static;
-    }
-
-    .menu nav {
-        justify-content: center;
+        border-radius: 20px;
+        position: sticky;
     }
 
     .me {
