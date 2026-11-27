@@ -5,278 +5,276 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="shortcut icon" href="IMG/logo.png" type="image/x-icon">
-    <title>BMwebKit | Creación de Páginas Web</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>BMWEBKIT | Creación de Páginas Web Profesionales</title>
 </head>
-<body>
+<body id="inicio">
 
-    <div class="bg-glow"></div>
-
-    <!-- BOTÓN FLOTANTE DIRECTO A WHATSAPP (FIJO ABAJO) -->
-    <a href="https://wa.me/34611178499?text=Hola%20Blas,%20vengo%20desde%20tu%20web%20y%20quiero%20pedir%20información." target="_blank" rel="noopener noreferrer" class="whatsapp-float">
-        💬 WhatsApp Directo
+    <a href="https://wa.me/34611178499?text=Hola%20Blas,%20vengo%20desde%20tu%20web%20BMWEBKIT%20y%20quiero%20contratar%20tus%20servicios." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
     </a>
 
-    <div class="caja">
+    <div class="caja-total">
+        <div class="caja">
 
-        <!-- MENÚ SUPERIOR CON HAMBURGUESA LATERAL -->
-        <header class="menu reveal">
-            <div class="logo">BM<span>.</span></div>
-            
-            <!-- Botón Hamburguesa -->
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <!-- Navegación Lateral / Escritorio -->
-            <nav class="nav-menu" id="navMenu">
-                <button class="menu-close" id="menuClose" aria-label="Cerrar menú">&times;</button>
-                <a href="#servicios" class="enlace-nav">Servicios Web</a>
-                <a href="#mantenimiento" class="enlace-nav">Mantenimiento</a>
-                <a href="#proyectos" class="enlace-nav">Vortex App</a>
-                <a href="https://wa.me/34611178499?text=Hola%20Blas,%20quiero%20contactar%20contigo" target="_blank" rel="noopener noreferrer" class="nav-wa">WhatsApp</a>
-            </nav>
-            <div class="menu-overlay" id="menuOverlay"></div>
-        </header>
-
-        <!-- PRESENTACIÓN / HERO -->
-        <section class="me reveal">
-            <div class="img-container">
-                <img src="IMG/me.jpg" alt="Blas Moral">
-                <span class="status-badge">🟢 Disponible para proyectos</span>
-            </div>
-            <div class="bio">
-                <div class="tags-row">
-                    <span class="tag-saludo">CREACIÓN DE PÁGINAS WEB</span>
-                </div>
-                <h1>Hola, soy <span>Blas Moral</span></h1>
-                <p>Dedicado a crear páginas web tanto para grandes empresas como para pequeños negocios. Una web no es una pérdida, es una inversión: un folleto digital y una ventana para mirar más allá. Únete a BMwebKit.</p>
+            <header class="menu">
+                <a href="#inicio" class="logo">BMWEB<span>KIT</span></a>
                 
-                <div class="info-plazos">
-                    <span>⏱️ <strong>Plazo estimado:</strong> 2 semanas en producción y testeo (puede tardar más o menos según proyecto).</span>
+                <div class="menu-derecha">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
-                
-                <div class="bio-acciones">
-                    <a href="https://wa.me/34611178499?text=Hola%20Blas,%20estoy%20interesado%20en%20contratar%20una%20web." target="_blank" rel="noopener noreferrer" class="btn-principal">💬 Escribir al WhatsApp</a>
-                    <a href="#servicios" class="btn-secundario">Ver tarifas web</a>
-                </div>
-            </div>
-        </section>
 
-        <!-- SERVICIOS Y TARIFAS WEB -->
-        <section id="servicios" class="servicios reveal">
-            <div class="titulo-centro">
-                <h2>CREACIÓN DE PÁGINAS WEB</h2>
-                <p>
-                    Proyecto real realizado en 
-                    <a href="https://talleresbielamotor.com" target="_blank" rel="noopener noreferrer">talleresbielamotor.com ↗</a>
-                </p>
-                <div class="avisos-grid">
-                    <span class="aviso-pill">⏱️ <strong>2 semanas en producción y testeo</strong> (puede tardar más o menos)</span>
-                </div>
-            </div>
+                <nav class="nav-menu" id="navMenu">
+                    <button class="menu-close" id="menuClose" aria-label="Cerrar menú">&times;</button>
+                    <a href="#inicio" class="enlace-nav">Inicio</a>
+                    <a href="#servicios" class="enlace-nav">Servicios Web</a>
+                    <a href="#mantenimiento" class="enlace-nav">Mantenimiento</a>
+                    <a href="#proyectos" class="enlace-nav">Vortex App</a>
+                    <a href="https://wa.me/34611178499?text=Hola%20Blas,%20quiero%20contratar%20tus%20servicios" target="_blank" rel="noopener noreferrer" class="nav-wa"><i class="fab fa-whatsapp"></i> Contratar</a>
+                </nav>
+                <div class="menu-overlay" id="menuOverlay"></div>
+            </header>
 
-            <div class="grid-precios">
-                <!-- Plan 1 -->
-                <div class="card-precio">
-                    <div class="card-header">
-                        <h3>Web Base</h3>
-                        <p class="desc-plan">Ideal para presencia profesional rápida</p>
-                        <div class="precio">35<span>€</span></div>
+            <section class="me">
+                <div class="img-container">
+                    <img src="IMG/me.jpg" alt="Blas Moral" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect width=%22200%22 height=%22200%22 fill=%22%23f1f5f9%22/><text x=%2250%25%22 y=%2254%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23ff6600%22 font-family=%22sans-serif%22 font-weight=%22bold%22 font-size=%2264%22>BM.</text></svg>'">
+                    <span class="status-badge"><i class="fas fa-circle" style="font-size: 8px; color: #22c55e;"></i> Disponible para contratos</span>
+                </div>
+                <div class="bio">
+                    <div class="tags-row">
+                        <span class="tag-saludo"><i class="fas fa-code"></i> CONTRATACIÓN DE SERVICIOS WEB</span>
+                        <span class="tag-espana"><i class="fas fa-globe-europe"></i> DESARROLLO PROFESIONAL</span>
                     </div>
-                    <ul>
-                        <li>Diseño moderno 100% responsive</li>
-                        <li>Secciones informativas y contacto</li>
-                        <li>~2 semanas producción y testeo</li>
-                        <li>Sin dominio ni hosting incluidos</li>
-                    </ul>
-                    <a href="https://wa.me/34611178499?text=Hola%20Blas,%20quiero%20contratar%20la%20Web%20Base%20por%2035€." target="_blank" rel="noopener noreferrer" class="btn-precio">Pedir por WhatsApp</a>
-                </div>
-
-                <!-- Plan 2 -->
-                <div class="card-precio">
-                    <div class="card-header">
-                        <h3>Blog / Portafolio</h3>
-                        <p class="desc-plan">Como esta web + tu propio dominio</p>
-                        <div class="precio">250<span>€</span></div>
+                    <h1>Hola, soy <span>Blas Moral</span></h1>
+                    <p>Contrata servicios profesionales de creación de páginas web y tiendas online personalizadas. Impulsa tu negocio con sistemas robustos y lleva tu proyecto al siguiente nivel.</p>
+                    
+                    <div class="stats-row">
+                        <div class="stat-item"><i class="fas fa-users"></i> <strong class="contador" data-target="50">0</strong><strong>+</strong> Personas confiando</div>
+                        <div class="stat-item"><i class="fas fa-check-circle"></i> <strong class="contador" data-target="10">0</strong><strong>+</strong> Proyectos con éxito</div>
                     </div>
-                    <ul>
-                        <li>Diseño estilo blog o portafolio</li>
-                        <li><strong>Dominio propio incluido (.es o .com)</strong></li>
-                        <li>~2 semanas producción y testeo</li>
-                        <li>Adaptado a móvil, tablet y PC</li>
-                    </ul>
-                    <a href="https://wa.me/34611178499?text=Hola%20Blas,%20quiero%20contratar%20el%20Plan%20Blog%20por%20250€." target="_blank" rel="noopener noreferrer" class="btn-precio">Pedir por WhatsApp</a>
-                </div>
 
-                <!-- Plan 3 -->
-                <div class="card-precio destacado">
-                    <span class="etiqueta-top">⭐ RECOMENDADO</span>
-                    <div class="card-header">
-                        <h3>Web + Stripe + Admin</h3>
-                        <p class="desc-plan">Para vender online y gestionar tu negocio</p>
-                        <div class="precio">900<span>€</span></div>
+                    <div class="info-plazos">
+                        <span><i class="fas fa-clock"></i> <strong>Plazo estimado:</strong> 2 semanas en producción y testeo (puede variar según proyecto).</span>
                     </div>
-                    <ul>
-                        <li>Pasarela de pagos integrada con <strong>Stripe</strong></li>
-                        <li><strong>Panel de administración</strong> privado</li>
-                        <li>Configuración avanzada de seguridad</li>
-                        <li><em>Sin dominio ni hosting incluidos</em></li>
-                    </ul>
-                    <a href="https://wa.me/34611178499?text=Hola%20Blas,%20quiero%20contratar%20el%20Plan%20Web%20con%20Stripe%20y%20Admin%20por%20900€." target="_blank" rel="noopener noreferrer" class="btn-precio btn-destacado">Pedir por WhatsApp</a>
-                </div>
-
-                <!-- Plan 4 -->
-                <div class="card-precio">
-                    <div class="card-header">
-                        <h3>Llave en Mano Total</h3>
-                        <p class="desc-plan">Me encargo absolutamente de todo</p>
-                        <div class="precio">1.200<span>€</span></div>
+                    
+                    <div class="bio-acciones">
+                        <a href="https://wa.me/34611178499?text=Hola%20Blas,%20quiero%20contratar%20tus%20servicios%20web." target="_blank" rel="noopener noreferrer" class="btn-principal"><i class="fab fa-whatsapp"></i> Contratar Servicios</a>
+                        <a href="#servicios" class="btn-secundario"><i class="fas fa-arrow-down"></i> Ver planes disponibles</a>
                     </div>
-                    <ul>
-                        <li>Todo lo del plan de 900€ (Stripe + Admin)</li>
-                        <li><strong>Subida y configuración completa online</strong></li>
-                        <li><strong>Hosting profesional</strong> incluido</li>
-                        <li><strong>Dominio (.es o .com)</strong> + Certificado SSL</li>
-                    </ul>
-                    <a href="https://wa.me/34611178499?text=Hola%20Blas,%20quiero%20contratar%20el%20Pack%20Llave%20en%20Mano%20por%201.200€." target="_blank" rel="noopener noreferrer" class="btn-precio">Pedir por WhatsApp</a>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- SECCIÓN: MANTENIMIENTO Y CAMBIOS DE DISEÑO -->
-        <section id="mantenimiento" class="mantenimiento-sec reveal">
-            <div class="titulo-centro">
-                <h2>MANTENIMIENTO Y SOPORTE WEB</h2>
-                <p>Mantén tu página web siempre segura, actualizada y funcionando al 100%</p>
-            </div>
-
-            <div class="grid-extras">
-                <!-- Mantenimiento Mensual o Anual -->
-                <div class="card-extra">
-                    <div class="extra-icon">🛠️</div>
-                    <div class="extra-info">
-                        <span class="tag-extra">MENSUAL O ANUAL</span>
-                        <h3>Mantenimiento Web Completo</h3>
-                        <div class="precio-extra">25€ — 50€ <span>/ mes o año según web</span></div>
-                        <p>Actualizaciones técnicas, copias de seguridad periódicas, revisión de seguridad, control de certificados y soporte prioritario para que no tengas que preocuparte por nada.</p>
-                        <a href="https://wa.me/34611178499?text=Hola%20Blas,%20quiero%20información%20sobre%20el%20Mantenimiento%20Web%20(25€-50€)." target="_blank" rel="noopener noreferrer" class="btn-extra">Solicitar Mantenimiento</a>
+            <section id="servicios" class="servicios">
+                <div class="titulo-centro">
+                    <h2>CONTRATA NUESTROS SERVICIOS</h2>
+                    <p>
+                        Proyecto real realizado en 
+                        <a href="https://talleresbielamotor.com" target="_blank" rel="noopener noreferrer">talleresbielamotor.com <i class="fas fa-external-link-alt" style="font-size: 11px;"></i></a>
+                    </p>
+                    <div class="avisos-grid">
+                        <span class="aviso-pill"><i class="fas fa-bolt"></i> Soluciones profesionales a medida</span>
+                        <span class="aviso-pill"><i class="fas fa-stopwatch"></i> 2 semanas en producción y testeo</span>
                     </div>
                 </div>
 
-                <!-- Cambios de Diseño -->
-                <div class="card-extra">
-                    <div class="extra-icon">🎨</div>
-                    <div class="extra-info">
-                        <span class="tag-extra">BAJO DEMANDA</span>
-                        <h3>Cambios de Diseño y Mejoras</h3>
-                        <div class="precio-extra">Desde 50€ <span>(50€ o más según cambio)</span></div>
-                        <p>Renovación visual de secciones, cambio de colores, nuevas imágenes, textos, adaptación responsive o añadido de nuevas funciones a tu web actual.</p>
-                        <a href="https://wa.me/34611178499?text=Hola%20Blas,%20necesito%20hacer%20cambios%20de%20diseño%20en%20mi%20web%20(desde%2050€)." target="_blank" rel="noopener noreferrer" class="btn-extra">Pedir Cambio de Diseño</a>
+                <div class="slider-track" id="sliderTrack">
+                    
+                    <div class="card-precio">
+                        <div class="card-header">
+                            <h3>Web Estática</h3>
+                            <p class="desc-plan">Para portafolio personal o web sencilla</p>
+                            <div class="precio">250<span>€</span></div>
+                        </div>
+                        <ul>
+                            <li class="incluye"><i class="fas fa-check"></i> Diseño web limpio y profesional</li>
+                            <li class="incluye"><i class="fas fa-check"></i> Dominio propio incluido (.es o .com)</li>
+                            <li class="incluye"><i class="fas fa-check"></i> Adaptada a móvil, tablet y ordenador</li>
+                            <li class="no-incluye"><i class="fas fa-times"></i> Sin base de datos</li>
+                            <li class="no-incluye"><i class="fas fa-times"></i> Sin sistema de Login / Registro</li>
+                            <li class="no-incluye"><i class="fas fa-times"></i> Sin panel de administración</li>
+                        </ul>
+                        <a href="https://wa.me/34611178499?text=Hola%20Blas,%20quiero%20contratar%20la%20Web%20Estática%20por%20250€." target="_blank" rel="noopener noreferrer" class="btn-precio"><i class="fab fa-whatsapp"></i> Contratar Servicio</a>
+                    </div>
+
+                    <div class="card-precio destacado">
+                        <span class="etiqueta-top">⭐ MÁS POPULAR</span>
+                        <div class="card-header">
+                            <h3>Web Negocio o Tienda</h3>
+                            <p class="desc-plan">Con Base de Datos, Login, Registro y Admin</p>
+                            <div class="precio">900<span>€</span></div>
+                        </div>
+                        <ul>
+                            <li class="incluye"><i class="fas fa-check"></i> Sistema con <strong>Base de Datos</strong> completa</li>
+                            <li class="incluye"><i class="fas fa-check"></i> Sistema de <strong>Login y Registro de usuarios</strong></li>
+                            <li class="incluye"><i class="fas fa-check"></i> <strong>Panel de administración</strong> exclusivo</li>
+                            <li class="incluye"><i class="fas fa-check"></i> Gestión de contenidos y datos dinámicos</li>
+                            <li class="no-incluye"><i class="fas fa-times"></i> Hosting profesional incluido</li>
+                            <li class="no-incluye"><i class="fas fa-times"></i> Dominio y SSL incluidos</li>
+                        </ul>
+                        <a href="https://wa.me/34611178499?text=Hola%20Blas,%20quiero%20contratar%20la%20Web%20Negocio%20o%20de%20Tienda%20por%20900€." target="_blank" rel="noopener noreferrer" class="btn-precio"><i class="fab fa-whatsapp"></i> Contratar Servicio</a>
+                    </div>
+
+                    <div class="card-precio todo-uno">
+                        <span class="etiqueta-top vip">👑 LLAVE EN MANO TOTAL</span>
+                        <div class="card-header">
+                            <h3>Todo en Uno + Hosting</h3>
+                            <p class="desc-plan">Todo lo anterior + Hosting y subida online</p>
+                            <div class="precio">1.200<span>€</span></div>
+                        </div>
+                        <ul>
+                            <li class="incluye"><i class="fas fa-check"></i> Todo lo de la web personalizada (900€)</li>
+                            <li class="incluye"><i class="fas fa-check"></i> Base de datos, Login, Registro y Admin</li>
+                            <li class="incluye"><i class="fas fa-check"></i> <strong>Hosting profesional</strong> incluido</li>
+                            <li class="incluye"><i class="fas fa-check"></i> <strong>Dominio (.es o .com)</strong> + Certificado SSL</li>
+                            <li class="incluye"><i class="fas fa-check"></i> <strong>Subida online y puesta en marcha</strong></li>
+                        </ul>
+                        <a href="https://wa.me/34611178499?text=Hola%20Blas,%20quiero%20contratar%20el%20Pack%20Todo%20en%20Uno%20por%201.200€." target="_blank" rel="noopener noreferrer" class="btn-precio"><i class="fab fa-whatsapp"></i> Contratar Servicio</a>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="mantenimiento" class="mantenimiento-sec">
+                <div class="titulo-centro">
+                    <h2>MANTENIMIENTO Y SOPORTE WEB</h2>
+                    <p>Mantén tu página web siempre segura, actualizada y funcionando al 100%</p>
+                </div>
+
+                <div class="grid-extras">
+                    <div class="card-extra">
+                        <div class="extra-icon"><i class="fas fa-tools"></i></div>
+                        <div class="extra-info">
+                            <span class="tag-extra">MENSUAL O ANUAL</span>
+                            <h3>Mantenimiento Web Completo</h3>
+                            <div class="precio-extra">25€ — 50€ <span>/ mes o año según web</span></div>
+                            <p>Actualizaciones técnicas, copias de seguridad periódicas, revisión de seguridad, control de certificados y soporte prioritario.</p>
+                            <a href="https://wa.me/34611178499?text=Hola%20Blas,%20quiero%20contratar%20el%20Mantenimiento%20Web." target="_blank" rel="noopener noreferrer" class="btn-extra"><i class="fab fa-whatsapp"></i> Contratar Soporte</a>
+                        </div>
+                    </div>
+
+                    <div class="card-extra">
+                        <div class="extra-icon"><i class="fas fa-paint-brush"></i></div>
+                        <div class="extra-info">
+                            <span class="tag-extra">BAJO DEMANDA</span>
+                            <h3>Cambios de Diseño y Mejoras</h3>
+                            <div class="precio-extra">Desde 50€ <span>(según complejidad)</span></div>
+                            <p>Renovación visual de secciones, cambio de colores, nuevas imágenes, textos o adición de nuevas funciones a tu web actual.</p>
+                            <a href="https://wa.me/34611178499?text=Hola%20Blas,%20quiero%20contratar%20cambios%20de%20diseño." target="_blank" rel="noopener noreferrer" class="btn-extra"><i class="fab fa-whatsapp"></i> Contratar Mejora</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- PROYECTO PLAY STORE: VORTEX -->
-        <section id="proyectos" class="playst reveal">
-            <div class="playst-info">
-                <span class="badge-app">📱 DISPONIBLE EN GOOGLE PLAY</span>
-                <h2>VORTEX — TV Gratis en Directo</h2>
-                <p>Aplicación Android publicada oficialmente en la Play Store. Diseñada para disfrutar de televisión gratuita en directo con una interfaz rápida e intuitiva.</p>
-                <div class="playst-stats">
-                    <div><strong>100%</strong><span>Gratuita</span></div>
-                    <div><strong>Android</strong><span>Optimizada</span></div>
-                    <div><strong>Directo</strong><span>Sin cortes</span></div>
+            <section id="proyectos" class="playst">
+                <div class="playst-info">
+                    <span class="badge-app"><i class="fab fa-google-play"></i> DISPONIBLE EN GOOGLE PLAY</span>
+                    <h2>VORTEX — TV Gratis en Directo</h2>
+                    <p>Aplicación Android publicada oficialmente en la Play Store. Diseñada para disfrutar de televisión gratuita en directo con una interfaz rápida e intuitiva.</p>
+                    <div class="playst-stats">
+                        <div><strong>100%</strong><span>Gratuita</span></div>
+                        <div><strong>Android</strong><span>Optimizada</span></div>
+                        <div><strong>Directo</strong><span>Sin cortes</span></div>
+                    </div>
+                    <a class="plbt" href="https://play.google.com/store/apps/details?id=box.plus3&hl=es" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-google-play"></i> Descargar en Google Play
+                    </a>
                 </div>
-                <a class="plbt" href="https://play.google.com/store/apps/details?id=box.plus3&hl=es" target="_blank" rel="noopener noreferrer">
-                    ▶ Descargar en Google Play
-                </a>
-            </div>
-            <div class="playst-img">
-                <div class="img-glow"></div>
-                <img src="IMG/vortex.webp" alt="App Vortex TV Gratis">
-            </div>
-        </section>
+                <div class="playst-img">
+                    <img src="IMG/vortex.webp" alt="App Vortex TV Gratis" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect width=%22200%22 height=%22200%22 fill=%22%231e293b%22/><text x=%2250%25%22 y=%2254%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%23ff6600%22 font-family=%22sans-serif%22 font-weight=%22bold%22 font-size=%2236%22>VORTEX</text></svg>'">
+                </div>
+            </section>
 
-        <!-- HABILIDADES -->
-        <section class="seccion-bloque reveal">
-            <div class="titulo-centro">
-                <h2>MI STACK TECNOLÓGICO</h2>
-                <p>Herramientas con las que construyo proyectos sólidos y escalables</p>
-            </div>
-
-            <div class="hab">
-                <div class="card-hab">
-                    <div class="icon-box"><img src="IMG/htmlcss.webp" alt="HTML y CSS"></div>
-                    <h3>HTML5 & CSS3</h3>
-                    <p>Diseño responsive, animaciones suaves y maquetación moderna.</p>
-                    <div class="barra"><div class="progreso" style="width: 95%;"></div></div>
+            <section class="seccion-bloque">
+                <div class="titulo-centro">
+                    <h2>MI STACK TECNOLÓGICO</h2>
+                    <p>Herramientas con las que construyo proyectos sólidos y escalables</p>
                 </div>
 
-                <div class="card-hab">
-                    <div class="icon-box"><img src="IMG/js.webp" alt="JavaScript"></div>
-                    <h3>JavaScript</h3>
-                    <p>Interactividad dinámica y experiencia de usuario fluida.</p>
-                    <div class="barra"><div class="progreso" style="width: 88%;"></div></div>
-                </div>
+                <div class="hab">
+                    <div class="card-hab">
+                        <div class="icon-box"><i class="fab fa-html5"></i></div>
+                        <h3>HTML5 & CSS3</h3>
+                        <p>Diseño responsive, animaciones suaves y maquetación moderna.</p>
+                        <div class="barra"><div class="progreso" style="width: 95%;"></div></div>
+                    </div>
 
-                <div class="card-hab">
-                    <div class="icon-box"><img src="IMG/php.webp" alt="PHP"></div>
-                    <h3>PHP</h3>
-                    <p>Lógica de servidor, paneles admin y bases de datos.</p>
-                    <div class="barra"><div class="progreso" style="width: 90%;"></div></div>
-                </div>
+                    <div class="card-hab">
+                        <div class="icon-box"><i class="fab fa-js"></i></div>
+                        <h3>JavaScript</h3>
+                        <p>Interactividad dinámica y experiencia de usuario fluida.</p>
+                        <div class="barra"><div class="progreso" style="width: 88%;"></div></div>
+                    </div>
 
-                <div class="card-hab">
-                    <div class="icon-box"><img src="IMG/Python.webp" alt="Python"></div>
-                    <h3>Python</h3>
-                    <p>Automatización, scripts y desarrollo backend.</p>
-                    <div class="barra"><div class="progreso" style="width: 85%;"></div></div>
+                    <div class="card-hab">
+                        <div class="icon-box"><i class="fas fa-database"></i></div>
+                        <h3>PHP & Base de Datos</h3>
+                        <p>Lógica de servidor, login, registro y paneles admin seguros.</p>
+                        <div class="barra"><div class="progreso" style="width: 90%;"></div></div>
+                    </div>
+
+                    <div class="card-hab">
+                        <div class="icon-box"><i class="fab fa-python"></i></div>
+                        <h3>Python</h3>
+                        <p>Automatización, scripts y desarrollo backend avanzado.</p>
+                        <div class="barra"><div class="progreso" style="width: 85%;"></div></div>
+                    </div>
                 </div>
+            </section>
+
+        </div>
+
+        <footer>
+            <div class="footer-contenido">
+                <div class="footer-logo">BMWEB<span>KIT</span></div>
+                <div class="socio-footer-badge">
+                    🤝 Socio de <strong>Biela Motor</strong> — <a href="https://talleresbielamotor.com" target="_blank" rel="noopener noreferrer">SABER MAS...</a>
+                </div>
+                <p class="footer-tagline">Blas Moral — Creación de Páginas Web | BMWEBKIT</p>
+                <div class="footer-links">
+                    <a href="mailto:blasmoral21@gmail.com"><i class="fas fa-envelope"></i> blasmoral21@gmail.com</a>
+                    <span>•</span>
+                    <a href="https://talleresbielamotor.com" target="_blank" rel="noopener noreferrer">talleresbielamotor.com</a>
+                    <span>•</span>
+                    <a href="https://play.google.com/store/apps/details?id=box.plus3&hl=es" target="_blank" rel="noopener noreferrer">Vortex App</a>
+                </div>
+                <p class="copyright">&copy; Todos los derechos reservados. Plazo medio de producción y testeo: 2 semanas.</p>
             </div>
-        </section>
-
+        </footer>
     </div>
 
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-contenido">
-            <div class="footer-logo">BM<span>.</span></div>
-            <div class="socio-footer-badge">
-                🤝 Socio de <strong>Biela Motor</strong> — <a href="https://talleresbielamotor.com" target="_blank" rel="noopener noreferrer">SABER MAS...</a>
-            </div>
-            <p class="footer-tagline">Blas Moral — Creación de Páginas Web | BMwebKit</p>
-            <div class="footer-links">
-                <a href="https://wa.me/34611178499?text=Hola%20Blas" target="_blank" rel="noopener noreferrer">💬 WhatsApp Directo</a>
-                <span>•</span>
-                <a href="https://talleresbielamotor.com" target="_blank" rel="noopener noreferrer">talleresbielamotor.com</a>
-                <span>•</span>
-                <a href="https://play.google.com/store/apps/details?id=box.plus3&hl=es" target="_blank" rel="noopener noreferrer">Vortex App</a>
-            </div>
-            <p class="copyright">&copy; Todos los derechos reservados. Plazo medio de producción y testeo: 2 semanas (puede variar más o menos).</p>
-        </div>
-    </footer>
-
-    <!-- SCRIPTS (Animaciones y Menú Hamburguesa Lateral) -->
+    <!-- SCRIPTS -->
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Animación al hacer scroll
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
+        // ANIMACIÓN DE CONTADORES (+50 Y +10)
+        function iniciarContadores() {
+            const contadores = document.querySelectorAll('.contador');
+            contadores.forEach(contador => {
+                const target = +contador.getAttribute('data-target');
+                let count = 0;
+                const speed = 2000 / target;
+                
+                const updateCount = () => {
+                    count++;
+                    if (count <= target) {
+                        contador.innerText = count;
+                        setTimeout(updateCount, speed);
+                    } else {
+                        contador.innerText = target;
                     }
-                });
-            }, { threshold: 0.12 });
+                };
+                updateCount();
+            });
+        }
 
-            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        document.addEventListener("DOMContentLoaded", function() {
+            iniciarContadores();
 
-            // Lógica del Menú Hamburguesa Lateral
             const menuToggle = document.getElementById('menuToggle');
             const navMenu = document.getElementById('navMenu');
             const menuClose = document.getElementById('menuClose');
